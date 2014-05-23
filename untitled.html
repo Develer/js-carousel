@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <title>animate demo</title>
   <style>
@@ -10,19 +10,17 @@
     button {
       margin: 5px;
     }
-    .main {
-      width: 100%;
-      overflow-x: hidden;
-    }
     .main-block {
-      /*width: 2000px; */position: fixed;
+      overflow-x: hidden;
+      width: 100%;
+      white-space: nowrap;
     }
     .block {
       position: relative;
       background-color: #abc;
       width: 80px;
       height: 80px;
-      float: left;
+      display: inline-block;
       margin: 5px;
       text-align: center;
     }
@@ -36,31 +34,29 @@
   <button id="go1">&laquo;</button>
   <button id="go2">&raquo;</button>
   <br/>
-  <div class="main">
-    <div class="main-block">
-      <div class="block">1</div>
-      <div class="block">2</div>
-      <div class="block">3</div>
-      <div class="block">4</div>
-      <div class="block">5</div>
-      <div class="block">6</div>
-      <div class="block active">7</div>
-      <div class="block">8</div>
-      <div class="block">9</div>
-      <div class="block">10</div>
-      <div class="block">11</div>
-      <div class="block">12</div>
-      <div class="block">13</div>
-      <div class="block">14</div>
-      <div class="block">15</div>
-      <div class="block">16</div>
-      <div class="block">17</div>
-      <div class="block">18</div>
-      <div class="block">19</div>
-      <div class="block">20</div>
-      <div class="block">21</div>
-      <div class="block">22</div>
-    </div>
+  <div class="main-block">
+    <div class="block">1</div>
+    <div class="block">2</div>
+    <div class="block">3</div>
+    <div class="block">4</div>
+    <div class="block">5</div>
+    <div class="block">6</div>
+    <div class="block active">7</div>
+    <div class="block">8</div>
+    <div class="block">9</div>
+    <div class="block">10</div>
+    <div class="block">11</div>
+    <div class="block">12</div>
+    <div class="block">13</div>
+    <div class="block">14</div>
+    <div class="block">15</div>
+    <div class="block">16</div>
+    <div class="block">17</div>
+    <div class="block">18</div>
+    <div class="block">19</div>
+    <div class="block">20</div>
+    <div class="block">21</div>
+    <div class="block">22</div>
   </div>
   <script>
     $( "#go1" ).click(function() {
