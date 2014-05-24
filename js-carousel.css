@@ -1,0 +1,25 @@
+/* js-carousel.css */
+
+body {
+    margin: 0px;
+}
+button {
+    margin: 5px;
+}
+.main-block {
+    overflow-x: hidden;
+    /*width: 100%;*/
+    white-space: nowrap;
+}
+.block {
+    position: relative;
+    background-color: #abc;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+.active {
+    background-color: rgb(226, 64, 64)
+}

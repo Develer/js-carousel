@@ -3,32 +3,9 @@
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <title>animate demo</title>
-  <style>
-    body {
-      margin: 0px;
-    }
-    button {
-      margin: 5px;
-    }
-    .main-block {
-      overflow-x: hidden;
-      width: 100%;
-      white-space: nowrap;
-    }
-    .block {
-      position: relative;
-      background-color: #abc;
-      width: 80px;
-      height: 80px;
-      display: inline-block;
-      margin: 5px;
-      text-align: center;
-    }
-    .active {
-      background-color: rgb(226, 64, 64)
-    }
-  </style>
+  <link rel="stylesheet" href="js-carousel.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js-carousel.js"></script>
 </head>
 <body>
   <button id="go1">&laquo;</button>
@@ -58,31 +35,5 @@
     <div class="block">21</div>
     <div class="block">22</div>
   </div>
-  <script>
-    $( "#go1" ).click(function() {
-      $( ".block:first" ).animate(
-        {
-          left: "-=145px"
-        },
-        {
-          duration: 500,
-          step: function( now, fx ){
-            $( ".block:gt(0)" ).css( "left", now );
-          }
-        });
-    });
-    $( "#go2" ).click(function() {
-      $( ".block:first" ).animate(
-        {
-          left: "+=145px"
-        },
-        {
-          duration: 500,
-          step: function( now, fx ){
-            $( ".block:gt(0)" ).css( "left", now );
-          }
-        });
-    });
-  </script>
 </body>
 </html>
