@@ -3,9 +3,6 @@
 body {
     margin: 0px;
 }
-button {
-    margin: 5px;
-}
 .main-block {
     overflow-x: hidden;
     /*width: 100%;*/
@@ -16,7 +13,7 @@ button {
     background-color: #abc;
     width: 80px;
     height: 80px;
-    display: inline-block;
+    float: left; /*display: inline-block;*/
     margin: 5px;
     text-align: center;
 }
