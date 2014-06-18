@@ -13,10 +13,12 @@ body {
     background-color: #abc;
     width: 80px;
     height: 80px;
-    float: left; /*display: inline-block;*/
+    /*float: left;*/ /* this option don't make gap between elements */
+    display: inline-block; /* this option make gap between elements */
     margin: 5px;
     text-align: center;
 }
+.block img {position: relative; top: 10px;}
 .active {
     background-color: rgb(226, 64, 64)
 }

@@ -16,7 +16,7 @@ $(function() {
     var move_amount = (central_position - element_width/2) - element_begin_pos;
     $central_element.offset({ left: central_position-element_width/2});
     $('.block').css('left', move_amount);
-    // $central_element.css('background-color', 'red');
+    $central_element.css('background-color', 'red');
 
     // keyboard events
     $("body").keydown(function(event) {
@@ -25,23 +25,26 @@ $(function() {
             $central_element.css('background-color', '#abc');
             $central_element = $central_element.next('.block');
             element_width = $central_element.outerWidth(true);
-
+            //
             central_position = window.innerWidth/2;
             element_begin_pos = $central_element.offset().left;
             move_amount = (central_position - element_width/2) - element_begin_pos;
-            // $('.block:first').insertAfter($('.block:last'));
+            // Put first element after last and move to the right
+            var begin_pos = $('.block:first').offset().left;
+            $('.block:first').insertAfter($('.block:last'));
+            $('.block').css('left', element_width + begin_pos);
         } else if (event.keyCode == 39) { // right
             $central_element.css('background-color', '#abc');
             $central_element = $central_element.prev('.block');
             element_width = $central_element.outerWidth(true);
-
+            //
             central_position = window.innerWidth/2;
             element_begin_pos = $central_element.offset().left;
             move_amount = (central_position - element_width/2) - element_begin_pos;
-            // $('.block:last').insertBefore($('.block:first'));
-        } else if (event.keyCode == 13) {
-            // TODO: make insert before first element
-            console.log('inserting...');
+            // Put last element before first and move to the left
+            var begin_pos = $('.block:first').offset().left;
+            $('.block:last').insertBefore($('.block:first'));
+            $('.block').css('left', begin_pos - element_width);
         }
 
         if (move_amount) {
@@ -54,11 +57,6 @@ $(function() {
                         },
                 complete: function() {
                     $central_element.css('background-color', 'red');
-                    // if (move_amount > 0) {
-                    //     $('.block:last').insertBefore($('.block:first'));
-                    // } else if (move_amount < 0) {
-                    //     $('.block:first').insertAfter($('.block:last'));
-                    // }
                 }
             });
         }
