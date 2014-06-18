@@ -1,6 +1,16 @@
 /* js-carousel.js */
 
 $(function() {
+
+    // load content
+    for (var i = 1; i < 20; i++) {
+        $('.main-block').append('\
+            <div class="block">\
+                <img src="http://api.randomuser.me/portraits/women/'+i+'.jpg"/>\
+            </div>\
+        ');
+    }
+
     // Find central element
     var block_count = $('.block').length;
     var central_element_index = Math.round(block_count/2);
