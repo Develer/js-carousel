@@ -1,15 +1,7 @@
 /* js-carousel-css3.js */
 
 $(function () {
-    // for (var i = 1; i < 3; i++) {
-    //     var my_image = '<img src="http://api.randomuser.me/portraits/women/'+i+'.jpg"/>';
-    //     var my_canvas = '<canvas width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>';
-    //     // var my_canvas = document.getElementById("myCanvas");
-    //     var ctx = my_canvas.getContext("2d");
-    //     // var img = document.getElementById("scream");
-    //     ctx.drawImage(my_image,10,10);
-    //     $('.main-block').append('<div class="block">'+my_canvas+'</div>');
-    // }
+    
     for (var i = 1; i < 20; i++) {
         $('.main-block').append('\
             <div class="block">\
@@ -46,5 +38,6 @@ $(function () {
             $('.block').css("transform", "translate("+pix+"px, 0px)");
             pix -=200;
         }
+        if (event.keyCode == 13) {}
     });
 });
